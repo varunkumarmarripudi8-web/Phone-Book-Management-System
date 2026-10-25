@@ -1,0 +1,22 @@
+// Example database configuration for the Phone Book project.
+// Rename to DBConnect.java and configure credentials locally.
+package p1;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class DBConnect {
+    public static Connection getCon() {
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            return DriverManager.getConnection(
+                "jdbc:mysql://localhost:3306/phonebook",
+                "YOUR_MYSQL_USERNAME",
+                "YOUR_MYSQL_PASSWORD"
+            );
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+}

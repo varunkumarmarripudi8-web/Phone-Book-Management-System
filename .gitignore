@@ -1,0 +1,13 @@
+# Eclipse and generated files
+.settings/
+build/
+bin/
+
+# Local database credentials
+src/main/java/p1/DBConnect.java
+
+# Local environment files
+.env
+.env.*
+!.env.example
+/git
